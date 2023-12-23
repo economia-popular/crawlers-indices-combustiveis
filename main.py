@@ -418,7 +418,10 @@ def CombustivelBrasil():
         "PRECO MÁXIMO DISTRIBUIÇÃO": "preco_maximo_distribuicao"
     }, axis='columns')
 
-    df_mensal_2013_atual = pd.read_excel("data/raw/mensal-brasil-desde-jan2013.xlsx", skiprows = 15, header=1)
+    df_mensal_2013_atual = pd.read_excel("data/raw/mensal_brasil-desde_jan2013.xlsx", skiprows = 15, header=1)
+
+    print(df_mensal_2013_atual)
+
     df_mensal_2013_atual = df_mensal_2013_atual.drop([
         "NÚMERO DE POSTOS PESQUISADOS", 
         "UNIDADE DE MEDIDA", 
@@ -553,8 +556,8 @@ def CombustivelBrasil():
 
 def Consolidate():
     CombustivelBrasil()
-    CombustivelRegioes()
-    CombustivelEstados()
+    # CombustivelRegioes()
+    # CombustivelEstados()
 
 
 def DownloadFile(url, output):
@@ -570,10 +573,13 @@ def DownloadSources():
 		# "https://www.gov.br/anp/pt-br/assuntos/precos-e-defesa-da-concorrencia/precos/precos-revenda-e-de-distribuicao-combustiveis/shlp/2001-2012/mensal-regioes-2001-a-2012.xlsx",
 		# "https://www.gov.br/anp/pt-br/assuntos/precos-e-defesa-da-concorrencia/precos/precos-revenda-e-de-distribuicao-combustiveis/shlp/2001-2012/mensal-estados-2001-a-2012.xlsx",
 		# "https://www.gov.br/anp/pt-br/assuntos/precos-e-defesa-da-concorrencia/precos/precos-revenda-e-de-distribuicao-combustiveis/shlp/2001-2012/mensal-municipios-2001-a-2012.xlsb",
-		"https://www.gov.br/anp/pt-br/assuntos/precos-e-defesa-da-concorrencia/precos/precos-revenda-e-de-distribuicao-combustiveis/shlp/mensal/mensal_regioes-desde_jan2013.xlsx",
-		"https://www.gov.br/anp/pt-br/assuntos/precos-e-defesa-da-concorrencia/precos/precos-revenda-e-de-distribuicao-combustiveis/shlp/mensal/mensal_regioes-desde_jan2013.xlsx",
+		# "https://www.gov.br/anp/pt-br/assuntos/precos-e-defesa-da-concorrencia/precos/precos-revenda-e-de-distribuicao-combustiveis/shlp/mensal/mensal_municipios-desde_jan2013.xlsx",
 		# "https://www.gov.br/anp/pt-br/assuntos/precos-e-defesa-da-concorrencia/precos/precos-revenda-e-de-distribuicao-combustiveis/shlp/mensal/mensal_municipios-desde_jan2013.xlsx"
         # https://www.gov.br/anp/pt-br/assuntos/precos-e-defesa-da-concorrencia/precos/precos-revenda-e-de-distribuicao-combustiveis/shlp/mensal/mensal_regioes-desde_jan2013.xlsx
+
+		# "https://www.gov.br/anp/pt-br/assuntos/precos-e-defesa-da-concorrencia/precos/precos-revenda-e-de-distribuicao-combustiveis/shlp/mensal/mensal_regioes-desde_jan2013.xlsx",
+        # "https://www.gov.br/anp/pt-br/assuntos/precos-e-defesa-da-concorrencia/precos/precos-revenda-e-de-distribuicao-combustiveis/shlp/mensal/mensal_brasil-desde_jan2013.xlsx",
+
         
     ]
 
