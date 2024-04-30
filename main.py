@@ -556,7 +556,7 @@ def CombustivelBrasil():
 
 def Consolidate():
     CombustivelBrasil()
-    # CombustivelRegioes()
+    CombustivelRegioes()
     # CombustivelEstados()
 
 
